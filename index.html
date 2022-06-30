@@ -46,7 +46,9 @@
 
       var sgmap = new Map();
       data[0].features.forEach((element) => {
-        sgmap.set(element.properties.Name, {...element,pop_map: pop_map.get(element.properties.Name) })
+        sgmap.set(element.properties.Name, {
+          ...element,pop_map: pop_map.get(element.properties.Name) 
+        })
         //console.log(sgmap)
       });
 
